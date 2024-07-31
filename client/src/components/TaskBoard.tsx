@@ -17,7 +17,7 @@ const TaskBoard:React.FC = () => {
         }
     }, [user]);
 
-    const handleDragStart = (event: React.DragEvent<HTMLDivElement>, taskId: string) => {
+    const handleDragStart = (taskId: string) => {
         setDraggedTaskId(taskId);
     }
 

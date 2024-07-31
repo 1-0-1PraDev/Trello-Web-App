@@ -9,16 +9,16 @@ interface TaskProps {
         description?: string;
         status: string;
         priority?: string;
-        deadline?: Date 
+        deadline?: string 
     };
-    onDragStart: (event: React.DragEvent<HTMLDivElement>, taskId: string) => void;
+    onDragStart: (taskId: string) => void;
 }
 
 const Task: React.FC<TaskProps> = ({ task, onDragStart }) => {
     return(
         <div
             draggable
-            onDragStart={(event) => onDragStart(event, task._id)}
+            onDragStart={() => onDragStart(task._id)}
             className="task"
         >
             <h4 className="task-title">{task.title}</h4>

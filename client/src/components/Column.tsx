@@ -8,7 +8,7 @@ interface ColumnProps{
     status: string;
     tasks: ITask[];
     onDrop: (event: React.DragEvent<HTMLDivElement>, status: string) => void;
-    onDragStart: (event: React.DragEvent<HTMLDivElement>, taskId: string) => void;
+    onDragStart: (taskId: string) => void;
     onCreateTask: (task: ITask) => void;
     onUpdateTask: (task: ITask) => void;
     onDeleteTask: (taskId: string) => void;
@@ -68,7 +68,6 @@ const Column: React.FC<ColumnProps> = ({ status, tasks, onDrop, onDragStart, onC
         >
             <h3 className="column-title">{status} <span className="total-task-number">{tasks.length}</span></h3>
            
-
             <div className="tasks">
                 {tasks.map((task) => (
                     <div className="task-wrapper" key={task._id}>
