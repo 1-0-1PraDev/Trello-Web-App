@@ -11,6 +11,8 @@ interface AuthContextProps {
     logout: () => void;
 }
 
+const BACKEND_URL = "https://trello-web-app-backend.onrender.com";
+
 const AuthContext = createContext<AuthContextProps | undefined>(undefined);
 
 export const AuthProvider: React.FC<{children: ReactNode}> = ({ children }) => {
@@ -34,7 +36,7 @@ export const AuthProvider: React.FC<{children: ReactNode}> = ({ children }) => {
 
     const login = async (email: string, password: string) => {
         try {
-            const { data } = await axios.post('http://localhost:5000/api/v1/user/login', { email, password });
+            const { data } = await axios.post(`${BACKEND_URL}/api/v1/user/login`, { email, password });
             localStorage.setItem('userInfo', JSON.stringify(data.userDetails));
             setUser(data.userDetails);
 
@@ -60,7 +62,7 @@ export const AuthProvider: React.FC<{children: ReactNode}> = ({ children }) => {
 
     const register = async (formData: FormData) => {
         try {
-            const { data } = await axios.post('http://localhost:5000/api/v1/user/register', formData, {
+            const { data } = await axios.post(`${BACKEND_URL}/api/v1/user/register`, formData, {
                 headers: { "Content-Type": "multipart/form-data" },
             });
             localStorage.setItem('userInfo', JSON.stringify(data.createdUser));
@@ -99,7 +101,7 @@ export const AuthProvider: React.FC<{children: ReactNode}> = ({ children }) => {
 
     const updateProfile = async(updatedData: FormData) => {
         try {
-            const { data } = await axios.put('http://localhost:5000/api/v1/user/update', updatedData, {
+            const { data } = await axios.put(`${BACKEND_URL}/api/v1/user/update`, updatedData, {
                 headers: {
                     "Content-Type": "multipart/form-data",
                     "Authorization": `Bearer ${user?.token}`,

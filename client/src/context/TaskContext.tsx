@@ -13,6 +13,7 @@ interface TaskContextProps{
 }
 
 const TaskContext = createContext<TaskContextProps | undefined>(undefined);
+const BACKEND_URL = "https://trello-web-app-backend.onrender.com";
 
 export const TaskProvider: React.FC<{children: ReactNode}> = ({ children }) => {
     const [tasks, setTasks] = useState<ITask[]>([]);
@@ -29,7 +30,7 @@ export const TaskProvider: React.FC<{children: ReactNode}> = ({ children }) => {
     
     const createTask = async(task: ITask) => {
         try {
-            const response = await axios.post('http://localhost:5000/api/v1/task/create', task, {
+            const response = await axios.post(`${BACKEND_URL}/api/v1/task/create`, task, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },
@@ -54,7 +55,7 @@ export const TaskProvider: React.FC<{children: ReactNode}> = ({ children }) => {
 
     const updateTask = async(id: string, task: ITask) => {
         try {
-            const { data } = await axios.put(`http://localhost:5000/api/v1/task/${id}`, task, {
+            const { data } = await axios.put(`${BACKEND_URL}/api/v1/task/${id}`, task, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },
@@ -79,7 +80,7 @@ export const TaskProvider: React.FC<{children: ReactNode}> = ({ children }) => {
 
     const deleteTask = async (id: string) => {
         try {
-            await axios.delete(`http://localhost:5000/api/v1/task/${id}`, {
+            await axios.delete(`${BACKEND_URL}/api/v1/task/${id}`, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },  
@@ -104,7 +105,7 @@ export const TaskProvider: React.FC<{children: ReactNode}> = ({ children }) => {
 
     const getTasks = async (token: string) => {
         try {
-            const { data } = await axios.get('http://localhost:5000/api/v1/task/all', {
+            const { data } = await axios.get(`${BACKEND_URL}/api/v1/task/all`, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },
