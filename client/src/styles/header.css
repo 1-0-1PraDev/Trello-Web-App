@@ -1,0 +1,30 @@
+.header{
+    width: 100%;
+    background-color: var(--secondary-bg-clr);
+    padding: 1.4rem 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.3rem;
+    justify-content: space-between;
+}
+
+.header .topBar{
+    width: 100%;
+}
+
+.header .topBar h1{
+    font-size: 3rem;
+    color: var(--text-primary-clr);
+}
+
+.header .topBar h1 span{
+    color: #9500ad;
+}
+
+.header .content > p{
+    color: var(--text-primary-clr);
+    font-size: 1.6rem;
+    margin-top: 1rem;
+    line-height: 1.5;
+    max-width: 700px;
+}

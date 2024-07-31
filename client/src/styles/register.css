@@ -1,0 +1,105 @@
+.register-container{
+    width: 100%;
+    height: 100vh;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    background-color: var(--primary-bg-clr);
+}
+
+.register-container form {
+    max-width: 420px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--secondary-bg-clr);
+    position: relative;
+    display: flex;
+    gap: 1.8rem;
+    padding: 3rem 2.7rem;
+    flex-direction: column;
+}
+
+.register-container h1{
+    font-size: 3rem;
+    color: var(--text-primary-clr);
+    text-align: center;
+}
+
+.register-container form .inputBx{
+    position: relative;
+    width: 100%;
+}
+
+.register-container form .inputBx input{
+    width: 100%;
+    padding: 1.6rem 1.8rem;
+    font-size: 1.58rem;
+    background-color: var(--primary-bg-clr);
+    border: none;
+    color: var(--text-primary-clr);
+}
+
+.register-container .footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+    text-align: center;
+    color: var(--text-primary-clr);
+    font-size: 1.5rem;
+}
+
+.register-container .footer > a{
+    font-weight: 600;
+    color: #00d2ff ;
+    text-decoration: underline;
+}
+
+.register-container .footer > a:active{
+    color: red;
+}
+
+.register-container .inputBx{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.register-container .inputBx input{
+    padding: 1.5rem 1.8rem;
+    background-color: var(--secondary-bg-clr);
+    border: none;
+    outline: none;
+    color: var(--text-primary-clr);
+    font-size: 1.8rem;
+}
+
+.register-container .inputBx label{
+    font-size: 1.9rem;
+    color: var(--text-primary-clr);
+}
+
+.register-container .inputBx .file-input{
+    display: none;
+}
+
+.register-container form .inputBx input:focus{
+    outline: 2px solid #00d2ff;
+}
+
+
+.imgPreviewBx{
+    position: relative;
+    width: 100%;
+}
+
+.imgPreviewBx > img{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

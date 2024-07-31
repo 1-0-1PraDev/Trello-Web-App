@@ -1,0 +1,276 @@
+.sidebar{
+    position: relative;
+    width: 250px;
+    min-height: 100vh;
+    background-color: var(--secondary-bg-clr);
+    display: flex;
+    flex-direction: column;
+    transition: 0.4s ease;
+}
+
+.sidebar .sidebar-toggle-menu{
+    position: absolute;
+    top: 1rem;
+    right: -40px;
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    background-color: #000;
+    cursor: pointer;
+    text-align: center;
+}
+
+.sidebar .sidebar-toggle-menu svg{
+    width: 2.5rem;
+    margin-top: 0.8rem;
+}
+
+.sidebar .user-profile-bx{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    /* background-color: red; */
+    padding: 2rem 2.4rem;
+    border-right: 3px solid var(--border-clr);    
+}
+
+.sidebar .user-profile-bx .user_icon{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    /* background: orange; */
+    border-radius: 50%;
+}
+
+.sidebar .user-profile-bx .user_icon > img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.sidebar .user-profile-bx .user_details h2{
+    font-size: 1.73rem;
+    white-space: nowrap;
+    color: var(--text-primary-clr);
+    margin-bottom: 0.23rem;
+}
+
+.sidebar .user-profile-bx .user_details p{
+    font-size: 1.5rem;
+    color: var(--faint-clr);
+}
+
+/* Navigation */
+.sidebar .navigation{
+    margin-top: 2rem;
+}
+
+.sidebar .navigation h4{
+    color: var(--faint-clr);
+    font-size: 1.76rem;
+    margin-bottom: 1rem;
+    padding-left: 1.4rem;
+}
+
+.sidebar .navigation .navbar{
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar .navigation .navbar li{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+    padding: 1.5rem 1.2rem;
+
+}
+
+.sidebar .navigation .navbar li:hover,
+.sidebar .navigation .navbar li.active{
+   background-color: var(--buffer-clr);
+}
+
+.sidebar .navigation .navbar li a{
+    font-size: 1.76rem;
+    font-weight: 600;
+    color: var(--faint-clr);
+}
+
+.sidebar .navigation .navbar li > svg{
+    color: var(--text-primary-clr);
+    width: 2.3rem;
+    color: var(--faint-clr);
+}
+
+.taskboard-container .filter-container{
+    width: 100%;
+    /* background-color: red; */
+    padding: 1rem 2rem;
+    margin-top: 1.2rem;
+}
+
+.taskboard-container .filter-container .searchBx{
+    width: 100%;
+    padding: 1.6rem 2rem;
+    background-color: var(--secondary-bg-clr);
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    border-radius: 0.2rem;
+}
+
+.taskboard-container .filter-container .searchBx input{
+    background-color: transparent;
+    width: 100%;
+    outline: none;
+    border: none;
+    color: var(--text-primary-clr);
+    font-size: 1.6rem;
+}
+
+.taskboard-container .filter-container .searchBx input::placeholder{
+    color: var(--faint-clr);
+}
+
+.taskboard-container .filter-container .searchBx i{
+    color: var(--faint-clr);
+    font-size: 1.7rem;
+}
+
+.taskboard-container .columns{
+    background-color: var(--primary-bg-clr);
+    width: calc(100vw - 250px);
+    display: grid;
+    grid-gap: 1rem;
+    padding: 1.4rem 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+}
+
+.taskboard-container .column{
+    width: 100%;
+    padding: 2rem 2.5rem;
+    border: 1px solid var(--border-clr);
+    border-radius: 0.5rem;
+}
+
+.taskboard-container .column .column-title{
+    width: 100%;
+    color: #fff;
+    font-size: 1.9rem;  
+    padding: 1rem;
+    text-align: center;
+    border-radius: 0.6rem;
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+    margin-bottom: 1.2rem;
+}
+
+.taskboard-container .column .column-title .total-task-number{
+    display: block;
+    width: 30px;
+    height: 30px;
+    font-size: 1.4rem;
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+}
+
+.taskboard-container .column:nth-child(1) .column-title{
+    background-color: #e44203;
+}
+
+.taskboard-container .column:nth-child(2) .column-title{
+    background-color: #d69900;
+}
+
+.taskboard-container .column:nth-child(3) .column-title{
+    background-color: #9500ad;
+}
+
+.taskboard-container .column:nth-child(4) .column-title{
+    background-color: #33730a;
+}
+
+.taskboard-container .tasks{
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    margin: 1rem 0;
+}
+
+.taskboard-container .tasks .btnsBx{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.4rem;
+    margin-top: 1.3rem;
+}
+
+button{
+    background-color: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.7);
+    padding: 1.1rem ;
+    width: 100%;
+    cursor: pointer;
+    text-align: center !important;
+    font-size: 1.7rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+button > svg{
+    width: 2rem;
+}
+
+.btn-primary{
+    color: var(--text-primary-clr) !important;
+    border: 3px dashed var(--border-clr);
+    border-radius: 0.4rem;
+}
+
+.sidebar-active{
+    left: 0 !important;
+}
+
+.sidebar .sidebar-toggle-menu{
+    display: none;
+}
+
+.divider{
+    width: 100%;
+    height: 0.24rem;
+    background-color: var(--border-clr);
+}
+
+.wrapper{
+    padding: 1.2rem;
+    flex: 0 0 45rem;
+    display: flex;
+}
+
+@media(max-width: 768px){
+    .sidebar{
+        position: absolute;
+        left: -250px;
+        z-index: 99999999;
+    }
+
+    .sidebar .sidebar-toggle-menu{
+        display: block;
+        z-index: 99999999;
+    }
+
+    .taskboard-container .columns{
+        width: 100vw;
+    }
+}

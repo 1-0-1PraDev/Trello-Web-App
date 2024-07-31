@@ -1,0 +1,43 @@
+.theme-toggler{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 45px;
+    color: #fff;
+    /* background-color: red; */
+    background-color: var(--primary-bg-clr);
+    padding: 0.5rem;
+    gap: 0.8rem;
+    border-radius: 0.4rem;
+    align-self: flex-end;
+}
+
+.theme-toggler div > svg{
+    width: 2.23rem;
+}
+
+.theme-toggler > div{
+    flex: 1;
+    text-align: center;
+    line-height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.7rem;
+    cursor: pointer;
+    font-size: 1.8rem;
+    border-radius: 0.4rem;
+}
+
+.theme-toggler > .light-btn.active{
+    background-color: #20e2e6;
+}
+
+.theme-toggler > .dark-btn{
+    color: var(--text-primary-clr);
+}
+
+.theme-toggler > .dark-btn.active{
+    background-color: #20e2e6;
+}

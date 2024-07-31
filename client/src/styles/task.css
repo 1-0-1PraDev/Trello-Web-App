@@ -1,0 +1,59 @@
+
+.taskboard-container .task-wrapper{
+    color: var(--text-primary-clr);
+    padding: 2.4rem 1.6rem;
+    background-color: var(--secondary-bg-clr);
+}
+
+.taskboard-container .tasks .task{
+    border-radius: 0.6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+    cursor: pointer;
+}
+
+.taskboard-container .tasks .task .task-title{
+    font-size: 2.2rem;
+}
+
+.taskboard-container .tasks .task .task-description{
+    font-size: 1.56rem;
+}
+
+.taskboard-container .tasks .task .tag{
+    font-size: 1.2rem;
+    padding: 0.5rem 1.2rem;
+    font-weight: 600;
+    border-radius: 2rem;
+    color: var(--text-primary-clr);
+    align-self: self-start;
+}
+
+.taskboard-container .tasks .task .tag.tag-low{
+    background-color: var(--priority-clr-1);
+}
+
+.taskboard-container .tasks .task .tag.tag-medium{
+    background-color: var(--priority-clr-2);
+}
+
+.taskboard-container .tasks .task .tag.tag-urgent{
+    background-color: var(--priority-clr-3);
+}
+
+.taskboard-container .tasks .task .deadline{
+    font-size: 1.6rem;
+}
+
+.taskboard-container .tasks .task .task-deadline{
+    display: flex;
+    gap: 0.3rem;
+    align-items: center;
+}
+
+.taskboard-container .tasks .task .task-deadline > svg{
+    color: var(--text-primary-clr);
+    width: 2.3rem;
+    color: var(--faint-clr);
+}

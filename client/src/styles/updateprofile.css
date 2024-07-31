@@ -1,0 +1,53 @@
+.updateProfileBx{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-bg-clr);
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.updateProfileContainer{
+    width: 100%;
+    padding: 1.4rem 2.3rem;
+}
+
+.updateProfileContainer > h1{
+    font-size: 3rem;
+    margin-bottom: 2.8rem;
+    color: var(--text-primary-clr);
+} 
+
+.updateProfileContainer form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.7rem;
+}
+
+.updateProfileContainer .inputBx{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.updateProfileContainer .inputBx input{
+    padding: 1.5rem 1.8rem;
+    background-color: var(--secondary-bg-clr);
+    border: none;
+    outline: none;
+    color: var(--text-primary-clr);
+    font-size: 1.8rem;
+}
+
+.updateProfileContainer .inputBx label{
+    font-size: 1.9rem;
+    color: var(--text-primary-clr);
+}
+
+.updateProfileContainer .inputBx .file-input{
+    display: none;
+}
