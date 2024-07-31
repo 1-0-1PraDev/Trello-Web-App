@@ -44,7 +44,7 @@ const TaskModal: React.FC<TaskModalProps> = ({
       description,
       status: status || "To-Do",
       priority: priority || "Low",
-      deadline: deadline ? new Date(deadline) : undefined,
+      deadline: deadline ? String(new Date(deadline)) : "",
     };
 
     onSave(newTask);
