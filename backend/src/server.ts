@@ -24,9 +24,10 @@ cloudinary.v2.config({
     api_secret: process.env.CLOUDINARY_API_SECRET
 });
 
+// process.env.FRONTEND_URL,
 // Essential middleware
 app.use(cors({
-    origin: process.env.FRONTEND_URL,
+    origin: "https://ephemeral-semifreddo-1bc0e7.netlify.app",
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
 }));
