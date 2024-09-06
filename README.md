@@ -127,6 +127,6 @@ Distributed under the MIT License. See `LICENSE` for more information.
 ### Contact
 
 
-Your Name - [@PraDev_101](https://twitter.com/@PraDev_101) - pranayhusukale@example.com
+Author - [@PraDev_101](https://twitter.com/@PraDev_101) - pranayhusukale@example.com
 
 Project Link: [https://github.com/1-0-1PraDev/](https://github.com/1-0-1PraDev/Trello-Web-App)
